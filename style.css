@@ -24,7 +24,7 @@ html {
     display: flex; /* используем flex для центрирования содержимого */
     align-items: center;  /* центрируем содержимое кнопки */
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 20px;
     width: 26px;
     height: 26px;
@@ -39,7 +39,8 @@ html {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #616161;
+    background-color: white;
+
   }
   .menu__btn > span::before {
     content: '';
@@ -63,21 +64,21 @@ html {
     padding: 80px 0;
     list-style: none;
     text-align: center;
-    background-color: #ECEFF1;
+    background-color: black;
     box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
   }
   /* элементы меню */
   .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #333;
+    color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
   }
   .menu__item:hover {
-    background-color: #CFD8DC;
+    background-color: gray;
   }
 
   #menu__toggle:checked ~ .menu__btn > span {
@@ -168,7 +169,7 @@ nav ul li > a:hover {
   width: 100%;
     height: 90vh;
     background: linear-gradient(360deg, #000000 18.78%, rgba(0, 0, 0, 0) 98.53%), url('./images/aperture-studious-bg.png') no-repeat ;
-    background-size: 100%;
+    background-size: cover;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -244,6 +245,7 @@ nav ul li > a:hover {
   height: 45vh;
   background: url(./images/what-we-do-1.png) no-repeat;
   grid-area: card1;
+  background-size: cover;
 }
 
 .what-we-do-card1 p {
@@ -261,6 +263,7 @@ nav ul li > a:hover {
   height: 45vh;
   background: url(./images/what-we-do-2.png) no-repeat;
   grid-area: card2;
+  background-size: cover;
 }
 
 .what-we-do-card2 p {
@@ -278,6 +281,7 @@ nav ul li > a:hover {
   height: 45vh;
   background: url(./images/what-we-do-3\ .png) no-repeat;
   grid-area: card3;
+  background-size: cover;
 }
 
 .what-we-do-card3 p {
@@ -295,6 +299,7 @@ nav ul li > a:hover {
   height: 45vh;
   background: url(./images/what-we-do-4.png) no-repeat;
   grid-area: card4;
+  background-size: cover;
 }
 
 .what-we-do-card4 p {
@@ -306,7 +311,7 @@ nav ul li > a:hover {
   width: 100%;
   height: 600px;
   background: url(./images/sunset.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -380,7 +385,7 @@ nav ul li > a:hover {
   width: 100%;
   height: 600px;
   background: url(./images/leafs.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -414,11 +419,11 @@ nav ul li > a:hover {
 }
 
 .clients-row {
-  width: 1100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 50px;
 }
 
 .clients-text {
@@ -432,7 +437,7 @@ nav ul li > a:hover {
   width: 100%;
   height: 600px;
   background: url(./images/star-fall.png) no-repeat;
-  background-size: 100%;
+  background-size: cover;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -519,13 +524,164 @@ footer {
   border: 3px solid black;
 }
 
+@media (min-width:1241px) {
+
+}
+
+@media (min-width:769px) and (max-width:1240px) {
+  .aperture-studios {
+    padding-top: 100px;
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(360deg, #000000 18.78%, rgba(0, 0, 0, 0) 98.53%), url(./images/aperture-studious-bg.png) no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aperture-text-container {
+    margin-top: -100px;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+  }
+}
 
 @media (min-width:569px) and (max-width:768px) {
     .hamburger-menu {
         display: block;
+        width: 10vw;
+        position: absolute;
     }
+
+    .aperture-text-container {
+      margin-top: -100px;
+      width: 70vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .what-we-do-card-container {
+      padding-top: 100px;
+      width: 70vw;
+      display: grid;
+      grid-template-areas:
+      'card1'
+      'card2'
+      'card3'
+      'card4';
+      gap: 20px;
+    }
+
+    .what-we-do-card1, .what-we-do-card2, .what-we-do-card3, .what-we-do-card4 {
+      width: 70vw;
+      height: 50vh;
+    }
+
+    .gear-cage {
+      background: #000000;
+      width: 100%;
+      height: 540px;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .gear-left {
+      width: 65%;
+      height: 540px;
+      padding-left: 100px;
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+    }
+
+  .gear-right {
+    width: 100%;
+    height: 50vh;
+    background: url(./images/gear-cage.png) no-repeat;
+    background-size: cover;
+  }
+
 
     nav {
         display: none;
     }
+}
+
+@media (max-width:567px) {
+  .wrapper {
+    overflow: hidden;
+  }
+
+  .hamburger-menu {
+    display: block;
+    width: 10vw;
+    position: absolute;
+}
+
+.aperture-text-container {
+  margin-top: -100px;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.what-we-do-card-container {
+  padding-top: 100px;
+  width: 70vw;
+  display: grid;
+  grid-template-areas:
+  'card1'
+  'card2'
+  'card3'
+  'card4';
+  gap: 20px;
+}
+
+.what-we-do-card1, .what-we-do-card2, .what-we-do-card3, .what-we-do-card4 {
+  width: 70vw;
+  height: 50vh;
+}
+
+.gear-cage {
+  background: #000000;
+  width: 100%;
+  height: 540px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.gear-left {
+  width: 65%;
+  height: 540px;
+  padding-left: 100px;
+  padding-right: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gear-right {
+width: 100%;
+height: 50vh;
+background: url(./images/gear-cage.png) no-repeat;
+background-size: cover;
+}
+
+
+nav {
+    display: none;
+}
 }
